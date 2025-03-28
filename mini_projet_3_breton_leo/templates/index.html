@@ -2,10 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page HTML du Projet</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Wait they don't love you like I love you</h1>
+    <div class="container">
+        <h1>Les Fonctions, c'est trop GENIAL</h1>
+    </div>
+
+    <form action="/" method="get">
+        <label for="f">Equation de la fonction&nbsp;:</label>
+        <input type="radio" name="choix" value="x²" checked /> x²
+        <input type="radio" name="choix" value="racine carrée de x" /> racine carrée de x    
+        <input type="radio" name="choix" value="sin(x)" /> sin(x)
+        <input type="radio" name="choix" value="cos(x)" /> cos(x)   
+        <input type="radio" name="choix" value="x" /> x  
+    </form>
 </body>
 </html>
