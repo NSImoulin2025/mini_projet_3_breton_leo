@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def graphique(chemin, tab, f):
+def graphique(graph, tab, f):
     x = np.linspace(tab[0], tab[1], tab[2])
     if f == "x²":
         y = np.square(x)
@@ -14,7 +14,9 @@ def graphique(chemin, tab, f):
     elif f == "x":
         y = x
     plt.plot(x, y)
-    plt.savefig(chemin)
-
+    plt.savefig(graph)
+    plt.close()
+    
+    
 if __name__=="__main__":
-    graphique([0, 2*np.pi, 60], "sin(x)")
+    graphique('mon_graphique.png',[0, 2*np.pi, 60], "sin(x)")
