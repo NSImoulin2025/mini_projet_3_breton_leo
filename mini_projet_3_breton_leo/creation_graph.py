@@ -19,4 +19,4 @@ def graphique(graph, tab, f):
     
     
 if __name__=="__main__":
-    graphique('mon_graphique.png',[0, 2*np.pi, 60], "sin(x)")
+    graphique('./static/mon_graphique.png',[0, 2*np.pi, 60], "sin(x)")
