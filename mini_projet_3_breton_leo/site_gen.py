@@ -7,16 +7,16 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def site_fonction():
-    args = request.args
+    expression = request.args.get('expression', default='x²')
+    if not expression:
+        expression = 'x²'
     mon_graphique = './static/mon_graphique.png'
-    equation = "x²"
-    if args.get("choix") is not None:
-        equation = args.get("choix")
     creation_graph.graphique(mon_graphique,
                              tab=[0, 2*np.pi, 60], 
-                             f=equation)
+                             f=expression)
     return render_template('index.html', chemin_graphique=mon_graphique)
 
 if __name__=="__main__":
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=8180)
+    
     
