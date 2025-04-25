@@ -12,13 +12,17 @@
     </div>
 
     <form action="/" method="get">
-        <label for="f">Equation de la fonction&nbsp;:</label>
-        <input type="radio" name="choix" value="x²" checked /> x²
-        <input type="radio" name="choix" value="racine carrée de x" /> racine carrée de x    
-        <input type="radio" name="choix" value="sin(x)" /> sin(x)
-        <input type="radio" name="choix" value="cos(x)" /> cos(x)   
-        <input type="radio" name="choix" value="x" /> x  
-        <input type="submit" value="envoyer" id="bouton" />
+        <fieldset>
+            <legend>Equation de la fonction :</legend>
+            <label><input type="radio" name="choix" value="x²" checked> x²</label>
+            <label><input type="radio" name="choix" value="racine carrée de x"> racine carrée de x</label>    
+            <label><input type="radio" name="choix" value="sin(x)"> sin(x)</label>
+            <label><input type="radio" name="choix" value="cos(x)"> cos(x)</label>   
+            <label><input type="radio" name="choix" value="x"> x</label>
+        </fieldset>
+        <input type="submit" value="Envoyer" id="bouton">
     </form>
 </body>
+</html>
+
 </html>
